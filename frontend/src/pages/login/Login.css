@@ -1,0 +1,127 @@
+:root{
+    --primary : #FF5F1F;
+    --secondary : #EDF4F2;
+}
+
+.login-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--secondary);
+    padding: 0px 20px;
+    color: var(--primary);
+}
+
+.login-form{
+    width: 400px;
+    height: 80vh;
+    box-shadow: 0px 0px 5px var(--primary);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.login-form .input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: min-content;
+    row-gap: 5px;
+}
+
+.login-form .login-input-one{
+    margin-top: 30px;
+}
+
+.login-form .login-input-two{
+    margin-top: 10px;
+}
+
+.login-form input{
+    outline: none;
+    border: 1.5px solid black;
+    height: 40px;
+    width: 300px;
+    padding: 0px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.login-form input:focus{
+    border-color: var(--primary);
+    transition: 0.2s ease-in-out;
+}
+
+.login-buttons{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.login-buttons .login-button{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-buttons .login-button:hover{
+    background-color: rgb(199, 71, 36);
+    transition: 0.3s ease-in;
+}
+
+.login-buttons .sign-button{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1.5px solid var(--primary);
+    font-size: 17px;
+    cursor: pointer;
+}
+
+@media(max-width : 350px){
+
+    .login-form input{
+        width: 250px;
+    }
+
+    .login-buttons .login-button{
+        width: 250px;
+    }
+
+    .login-buttons .sign-button{
+        width: 250px;
+        height: 40px;
+        border-radius: 10px;
+        border: 1.5px solid var(--primary);
+        font-size: 17px;
+        cursor: pointer;
+    }
+    
+
+}
+
+@media(max-width : 300px){
+
+    .login-form input{
+        width: 200px;
+    }
+
+    .login-buttons .login-button{
+        width: 200px;
+    }
+
+    .login-buttons .sign-button{
+        width: 200px;
+    }
+}

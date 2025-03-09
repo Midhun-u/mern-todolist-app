@@ -1,0 +1,158 @@
+:root{
+    --primary : #FF5F1F;
+    --secondary : #EDF4F2;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "M PLUS 1", sans-serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+}
+
+.todo-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    row-gap: 10px;
+}
+
+.todo-container h1{
+    margin-top: -30px;
+    color: var(--primary);
+}
+
+.todo-section{
+    width: 500px;
+    height: 80vh;
+    box-shadow: 0px 0px 5px var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-input{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    position: relative;
+}
+
+.todo-input input{
+    outline: none;
+    box-shadow: 0px 0px 2px;
+    border: none;
+    width: 400px;
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 80px;
+    font-size: 16px;
+}
+
+.todo-input button{
+    padding: 0px 20px;
+    height: 35px;
+    border: none;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 16px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+}
+
+.todo-items{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.todo-item-section{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px;
+    border-radius: 10px;
+    width: 98%;
+}
+
+.todo-item-section li{
+    list-style: none;
+    height: 100%;
+}
+
+.todo-item-section input[type = "radio"]{
+    accent-color: var(--primary);
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.todo-task span{
+    height: 100%;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.radio-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media(max-width : 540px){
+
+    .todo-input{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    
+    .todo-input button{
+        position: relative;
+    }
+
+    .todo-items{
+        width: 100%;
+        height: 100%;
+    }
+
+    .todo-section{
+        width: 300px;
+        height: 80vh;
+    }
+
+    .todo-input input{
+        width: 98%;
+    }
+    
+
+}
